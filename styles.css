@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #423423;
+}
+
+#TitleContainer{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    padding:10px;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    border: 2px solid white;
+}
+
+#buttonsContainer{
+    display: flex;
+    height: 50px;
+    width: 200px;
+    margin: 10px;
+}
+#rockButton, #paperButton, #scissorButton{
+    background-color: green;
+    color: white;
+    padding:10px;
+    margin: 3px;
+}
+
+.showcase{
+    display: inline-flex;
+    margin:10px;
+    border: solid 2px white;
+    flex-direction: column;
+    color:white;
+    padding:10px;
+}
