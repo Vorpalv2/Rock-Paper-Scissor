@@ -1,12 +1,19 @@
 //button click --> DoM update --> check if else condition
 var choice = ["Rock","Paper","Scissor"];
 var playerChoice = prompt("Enter your choice");
+var playerChoiceforShow = playerChose(playerChoice);
+var computerChoiceforShow = computerChoice();
 
-document.querySelector("#rockButton").addEventListener("click",function(){
+console.log("Player Choice: " + playerChoiceforShow);
+console.log("Computer Choice: "+computerChoiceforShow);
+
+//document.querySelector("#rockButton").addEventListener("click",function(){
     //alert("check");
-    document.querySelector("#player").textContent = "Rock";
-})
+  
+//})
 
+document.querySelector("#player").textContent = playerChoiceforShow;
+document.querySelector("#computer").textContent = computerChoiceforShow;
 
 function computerChoice(){
     var RandomNum = Math.floor(Math.random()*3);
@@ -32,19 +39,25 @@ function game (intake){
 
 function playerChose(intakePlayer){
     var intaketoupper = intakePlayer.toUpperCase();
-    console.log(intaketoupper);
+    //console.log(intaketoupper);
 
-    if(intaketoupper === "ROCK")
-        console.log("Player chose Rock");
-
-    else if (intaketoupper == "PAPER"){
-        console.log("Player chose Paper");
+    if(intaketoupper === "ROCK"){
+       // console.log("Player chose Rock");
+        return "Rock";
+    }
+    else if (intaketoupper === "PAPER"){
+      //  console.log("Player chose Paper");
+        return "Paper";
+    }
+    else if(intaketoupper === "SCISSOR")
+    {
+      //  console.log("Player chose Scissor");
+        return "Scissor";
     }
     else{
-        console.log("Player chose Scissor");
+        alert("wrong input");
     }
 }
 
-playerChose(playerChoice);
 
 //game(computerChoice(choice));
